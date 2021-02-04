@@ -17,27 +17,25 @@ const arrayTipsValue = [calcTip(125),calcTip(555),calcTip(44)]
 const arrayTotalValue = [calcTip(125) + bills[0],calcTip(555) + bills[1],calcTip(44) + bills[2]]
 console.log("bills value and tips",arrayTotalValue)
 console.log("tips value",arrayTipsValue)
-
-
 //func tutorial!
 // Date 1 44 23 71 ==> Dolphins, koalas ====> 65 54 49
 // function to calculate Average of 3 scores
-// let calcAverage = (num1,num2,num3)=>{
+let calcAverage = (num1,num2,num3)=>{
     
-//    let result = (num1 + num2 + num3)/3
-//    return result
-// }
-// function checkWinners(num1,num2,num3){
-//     const avgDolhins = calcAverage(num1,num2,num3)
-//     const avgKoalas= calcAverage(num1,num2,num3)
-//     return avgDolhins >= 2* avgKoalas ? `Dolphins Win ${avgDolhins}`:`Koalas Win ${avgKoalas}`
+   let result = (num1 + num2 + num3)/3
+   return result
+}
+function checkWinners(num1,num2,num3){
+    const avgDolhins = calcAverage(num1,num2,num3)
+    const avgKoalas= calcAverage(num1,num2,num3)
+    return avgDolhins >= 2* avgKoalas ? `Dolphins Win ${avgDolhins}`:`Koalas Win ${avgKoalas}`
    
 
-// }
-// console.log(checkWinners(44,23,71))
-// console.log(checkWinners(65,54,49))
+}
+console.log(checkWinners(44,23,71))
+console.log(checkWinners(65,54,49))
 //Create two function for different work
-// Create a function to count the assigned the numbers of repeated character in this string
+// Create a function to count assigned the numbers of repeated character in this string
 // character  
 //{c:2,h:1,a:2,r:2,t:1,e:1}
      
