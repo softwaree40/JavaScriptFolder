@@ -63,25 +63,25 @@ console.log(countNumbersOfCharacter("Ajagunna"))
 // example reverse characters
 // characters => 
 
-// function reserverWordInString(word){
-//     let string = []
-//  // iterate over the words
-//  for( let i = word.length-1; i >=0; i--)  string.push(word[i])
+function reserverWordInString(word){
+    let string = []
+ // iterate over the words
+ for( let i = word.length-1; i >=0; i--)  string.push(word[i])
 
-//    return string.join("")
+   return string.join("")
 
-// }
-// console.log(reserverWordInString("characters"))  // sretcarahc
-// function reverseNum(num){
-//     let newArray = []
-//   for (let i = num.length-1; i >=0; i--){
-//      newArray.push(num[i])
+}
+console.log(reserverWordInString("characters"))  // sretcarahc
+function reverseNum(num){
+    let newArray = []
+  for (let i = num.length-1; i >=0; i--){
+     newArray.push(num[i])
     
-//   }
-//   return newArray
+  }
+  return newArray
 
-// }
-// console.log(reverseNum([1,2,3,4,5,6,7,8,9]))
+}
+console.log(reverseNum([1,2,3,4,5,6,7,8,9]))
 
 
 // passing array to a function
