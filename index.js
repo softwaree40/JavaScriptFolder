@@ -39,25 +39,25 @@ console.log(checkWinners(65,54,49))
 // character  
 //{c:2,h:1,a:2,r:2,t:1,e:1}
      
-// function countNumbersOfCharacter(string){
-//   // create an object 
-//   const result = [];
-//   // iterate over the character  => string.length == 9
-//   // i = 0 0< 9 yes 
-//   for(let i = 0; i < string.length; i++){
+function countNumbersOfCharacter(string){
+  // create an object 
+  const result = [];
+  // iterate over the character  => string.length == 9
+  // i = 0 0< 9 yes 
+  for(let i = 0; i < string.length; i++){
       
-//      let char = string[i].toLowerCase() // char is c because string have index of 0 which is the first letter of character
-//      if(result[char] > 0){
-//         result[char]++; 
+     let char = string[i].toLowerCase() // char is c because string have index of 0 which is the first letter of character
+     if(result[char] > 0){
+        result[char]++; 
 
-//      }else{
-//          result[char] = 1;
-//      }
+     }else{
+         result[char] = 1;
+     }
     
-// }
-// return result;
-// }
-// console.log(countNumbersOfCharacter("Ajagunna"))
+}
+return result;
+}
+console.log(countNumbersOfCharacter("Ajagunna"))
 
 //Reverse words in a string 
 // example reverse characters
