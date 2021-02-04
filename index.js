@@ -86,10 +86,16 @@ console.log(reverseNum([1,2,3,4,5,6,7,8,9]))
 
 // passing array to a function
 
-// function calculateArray(arg*){
+function calculateArray(years){
   
-//  let age = 2021 - years;
-//  return age;
+  
+ let age = 2021 - years;
+ return age;
 
-// }
-// console.log(calculateArray([2000,2001,2002,2003,2004]));
+}
+const arrayOfYear = [2000,2001,2002,2003,2004]
+const arr = [calculateArray(arrayOfYear[0]),calculateArray(arrayOfYear[1]),calculateArray(arrayOfYear[2]),calculateArray(arrayOfYear[3]),calculateArray(arrayOfYear[4])]
+console.log(arr)
+
+
+
