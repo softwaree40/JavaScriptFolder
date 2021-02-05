@@ -34,11 +34,19 @@ const johnObject ={
 
  }
 
+// Write a function that iterate half way the characters
 
+function countHalfWay(string){
+    arrayCount = []
+   for(let i = 0; i < string.length/2; i++){
+   arrayCount.push(string[i])
 
+   }
+   return arrayCount.join(" ")
 
+}
 
-
+console.log("calculate Half way",countHalfWay("characters"))
 
 
 
