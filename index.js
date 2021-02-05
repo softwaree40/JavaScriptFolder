@@ -1,27 +1,81 @@
 //  "use strict";
+
+const markObject ={
+ fullName: "Mark Miller",
+ mass: 78,
+ height:1.69,
+
+ calcMark: function(){
+
+   this.IBM = this.mass/(this.height * this.height)
+   return this.IBM
+ }
+}
+const johnObject ={
+    fullName: "John Smith",
+    mass: 92,
+    height:1.95,
+   
+    calcJohn: function(){
+   
+      this.IBM = this.mass/(this.height * this.height)
+      return this.IBM
+    }
+   }
+  
+ if(markObject.calcMark() > johnObject.calcJohn()){
+
+    //"John's BMI (28.3) is Higher than Mark's (23.9)!"
+   console.log(`${markObject.fullName}'s BMI (${markObject.calcMark()}) is Higher than ${johnObject.fullName}'s (${johnObject.calcJohn()})!`)
+
+ }else{
+
+    console.log(`${johnObject.fullName}'s BMI (${johnObject.calcJohn()}) is Higher than ${johnObject.fullName}'s (${markObject.calcMark()})`)
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
 // // 15% if billsValue is between 50 and 300 and if different tips should be 20%
 
 // // write a function calcTip
 // //Count the number of pairs in an array having sums that are evenly divisible by a given number.
 // // array = [[1,2],[3,5],[6,7]] => 1 + 2 % 2 === 0 that means 
 
-const array = [[1,2],[3,5],[6,7]]
- for(let i = 0; i < array.length; i++){
-   array[i].map((element)=> console.log("check",element))
+// const array = [[1,2],[3,5],[6,7]]
+//  for(let i = 0; i < array.length; i++){
+//    array[i].map((element)=> console.log("check",element))
 
 
- }
- const jonas = {
-     firstName: "Wale",
-     lastName: "Abbey",
-     job: "Programmer",
-     location: "New York",
-     age: 20
-    }
+//  }
+//  const jonas = {
+//      firstName: "Wale",
+//      lastName: "Abbey",
+//      job: "Programmer",
+//      location: "New York",
+//      age: 20
+//     }
     
- const interestedIn = prompt("What do you want to know about me? ")
- const returnValue =jonas[interestedIn.toLocaleLowerCase()] ? `${jonas[interestedIn].toLocaleLowerCase()}`:`${prompt("What do you want to know about me? ")}`
- console.log(returnValue)
+//  const interestedIn = prompt("What do you want to know about me? ")
+//  const returnValue =jonas[interestedIn.toLocaleLowerCase()] ? `${jonas[interestedIn].toLocaleLowerCase()}`:`${prompt("What do you want to know about me? ")}`
+//  console.log(returnValue)
+//How to add element to an object using both dot notation and bracket notation!
+
+
+
+
+
+
+
 
 // const calcTip = (billsValue)=>{
 
@@ -117,5 +171,35 @@ const array = [[1,2],[3,5],[6,7]]
 // const arr = [calculateArray(arrayOfYear[0]),calculateArray(arrayOfYear[1]),calculateArray(arrayOfYear[2]),calculateArray(arrayOfYear[3]),calculateArray(arrayOfYear[4])]
 // console.log(arr)
 
+//challenge 
+// let jonas ={
+//     firstName: "Jonas",
+//     lastName: "Schmedtmann",
+//     age: 2037 - 1991,
+//     job: "teacher",
+//     friends: ["Michael", "Peter", "Steven"]
+// }
+// // "Jonas has 3 friends,and his best friend is called Michael"
+// console.log(jonas.friends.length)
 
+// const result = `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+// console.log(result)
+
+// const jonas ={
+//     firstName: "Jonas",
+//     lastName: "Schmedtmann",
+//     birthYear:1991,
+//     job: "teacher",
+//     friends: ["Michael", "Peter", "Steven"],
+//     hasDriversLicense: true,
+//     calc: function(){
+
+//       this.age = 2037 - this.birthYear 
+//       return this.age
+//     }
+// }
+ 
+//  // "Jonas is a 46-year old teacher,and he has a driver's license"
+ 
+//  console.log(`${jonas.firstName} is a ${jonas.age}-year old ${jonas.job},and he has ${jonas.hasDriversLicense? "a":"no"}driver's license`);
 
