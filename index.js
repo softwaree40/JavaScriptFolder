@@ -1,57 +1,85 @@
 
-function squareOfOtherArray(string1,string2){
- if(string1.length !== string2.length){
-   return false
- }
-  let lookUp = {}
-  
-  for(let i = 0; i < string1.length; i++){
-    lookUp[string1[i]] ? lookUp[string1[i]] +=1 : lookUp[string1[i]] = 1 
-  }
+//Giving array we need to add two pairs of number which is equal zero and return this numbers.
 
-  for(let i = 0; i < string2.length; i++){
-    if(!lookUp[string2[i]]){
-      return false
-    }else{
-      lookUp[string2[i]] -= 1
-    }
+
+function addPairs(arr){
+
+ let left = 0
+ let right = arr.length-1   
+ while (left < right){
+   let sum = arr[left] + arr[right]
+   if(sum === 0){
+
+     return [arr[left],arr[right]]
+   }else if (sum > 0){
+      right -- ;
+
+   }else{
+     left ++;
+   }
+  
+
+ }
+
+}
+console.log(addPairs([-1,-2,-3,-4,0,1,2,3,4,5,6,7,8]))
+
+
+
+
+// function squareOfOtherArray(string1,string2){
+//  if(string1.length !== string2.length){
+//    return false
+//  }
+//   let lookUp = {}
+  
+//   for(let i = 0; i < string1.length; i++){
+//     lookUp[string1[i]] ? lookUp[string1[i]] +=1 : lookUp[string1[i]] = 1 
+//   }
+
+//   for(let i = 0; i < string2.length; i++){
+//     if(!lookUp[string2[i]]){
+//       return false
+//     }else{
+//       lookUp[string2[i]] -= 1
+//     }
 
      
-  }
-  return true
-}
-console.log(squareOfOtherArray("zoo","ooz"))
+//   }
+//   return true
+// }
+// console.log(squareOfOtherArray("zoo","ooz"))
 
-// Giving two string write a function to reverse one of the string and compared to the other string.
+// // Giving two string write a function to reverse one of the string and compared to the other string.
 
 
-function reverseComparision(string1,string2){
- if(string1.length !== string2.length){
-   return false
- }
- let lookUp = {}
-  for(let i =string1.length-1; i >= 0 ; i--){
-    lookUp[string1[i]] ? lookUp[string1[i]]+=1 : lookUp[string1[i]] = 1
+// function reverseComparision(string1,string2){
+//  if(string1.length !== string2.length){
+//    return false
+//  }
+//  let lookUp = {}
+//   for(let i =string1.length-1; i >= 0 ; i--){
+//     lookUp[string1[i]] ? lookUp[string1[i]]+=1 : lookUp[string1[i]] = 1
 
-  } 
-   for(let i = 0; i <string2.length;i++){
+//   } 
+//    for(let i = 0; i <string2.length;i++){
 
-     if(!lookUp[string2[i]]){
-       return false
-     }else{
-       lookUp[string1[i]] -=1
-     }
-   }
+//      if(!lookUp[string2[i]]){
+//        return false
+//      }else{
+//        lookUp[string1[i]] -=1
+//      }
+//    }
     
-  return true 
-}
+//   return true 
+// }
 
-console.log(reverseComparision("wale","wale"))
-console.log(reverseComparision("baby","ybab"))
-console.log(reverseComparision("bab","by"))
-console.log(reverseComparision("",""))
-console.log(reverseComparision([1,2,3,4],[1,2,3,4]))
-console.log(reverseComparision([1,2,3],[1,4,9]))
+// console.log(reverseComparision("wale","wale"))
+// console.log(reverseComparision("baby","ybab"))
+// console.log(reverseComparision("bab","by"))
+// console.log(reverseComparision("",""))
+// console.log(reverseComparision([1,2,3,4],[1,2,3,4]))
+// console.log(reverseComparision([1,2,3],[1,4,9]))
 
 
 
