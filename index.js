@@ -1,21 +1,41 @@
 // function to check unique numbers
 
 
-function countUniqueNum(arr){
- let left = 0;
-  for(let rigth = 1; rigth < arr.length;rigth++){
+//find the sum of two pairs of number added equal 10 
+function add2Pairs(arr){
+  let left = 0
+  let rigth = arr.length-1
+ 
+  while(left < rigth){
+    let sum = arr[left] + arr[rigth]
+    // checking if the sum of left and rigth is equal 10
+    if(sum === 10 ){
+       return [arr[left],arr[rigth]]
+    }else if (sum > 10 ){
+      rigth -- 
+    }else{
+      left ++
+    }
 
-     if(arr[left] !== arr[rigth]){
-       left ++ ;
-       arr[left] = arr[rigth]
-
-     }
   }
- 
-  return left + 1
- 
+
 }
-console.log(countUniqueNum([1,1,1,1,1,2]))
+console.log(add2Pairs([1,2,3,4,5,6,7,8]))
+// function countUniqueNum(arr){
+//  let left = 0;
+//   for(let rigth = 1; rigth < arr.length;rigth++){
+
+//      if(arr[left] !== arr[rigth]){
+//        left ++ ;
+//        arr[left] = arr[rigth]
+
+//      }
+//   }
+ 
+//   return left + 1
+ 
+// }
+// console.log(countUniqueNum([1,1,1,1,1,2]))
 
 
 
@@ -47,10 +67,10 @@ console.log(countUniqueNum([1,1,1,1,1,2]))
 //  let right = arr.length-1   
 //  while (left < right){
 //    let sum = arr[left] + arr[right]
-//    if(sum === 0){
+//    if(sum === 10){
 
 //      return [arr[left],arr[right]]
-//    }else if (sum > 0){
+//    }else if (sum > 10){
 //       right -- ;
 
 //    }else{
@@ -61,7 +81,7 @@ console.log(countUniqueNum([1,1,1,1,1,2]))
 //  }
 
 // }
-// console.log(addPairs([-1,-2,-3,-4,0,1,2,3,4,5,6,7,8]))
+// console.log(addPairs([1,2,3,4,5,6,7,8]))
 
 
 
