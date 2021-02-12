@@ -1,28 +1,47 @@
 
 //Giving array we need to add two pairs of number which is equal zero and return this numbers.
+// Giving array of a number with two pairs if they are even return the numbers
+function checkEvenNum(arr){
+  let left = 0
+  let rigth = arr.length-1
+ while(arr[left] < arr[rigth]){
 
-
-function addPairs(arr){
-
- let left = 0
- let right = arr.length-1   
- while (left < right){
-   let sum = arr[left] + arr[right]
-   if(sum === 0){
-
-     return [arr[left],arr[right]]
-   }else if (sum > 0){
-      right -- ;
-
+  let evenNumber = (arr[left] + arr[rigth])
+    
+   if(evenNumber % 2 === 0){
+     return [arr[left], arr[rigth]]
+   }else if (evenNumber > 0){
+      rigth --
    }else{
-     left ++;
+     left ++
    }
   
-
  }
 
+ 
 }
-console.log(addPairs([-1,-2,-3,-4,0,1,2,3,4,5,6,7,8]))
+console.log(checkEvenNum([-1,-2,-3,-4,0,1,2,3,4,5,6,7,8]))
+// function addPairs(arr){
+
+//  let left = 0
+//  let right = arr.length-1   
+//  while (left < right){
+//    let sum = arr[left] + arr[right]
+//    if(sum === 0){
+
+//      return [arr[left],arr[right]]
+//    }else if (sum > 0){
+//       right -- ;
+
+//    }else{
+//      left ++;
+//    }
+  
+
+//  }
+
+// }
+// console.log(addPairs([-1,-2,-3,-4,0,1,2,3,4,5,6,7,8]))
 
 
 
