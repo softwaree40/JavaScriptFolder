@@ -25,33 +25,33 @@ console.log(squareOfOtherArray("zoo","ooz"))
 // Giving two string write a function to reverse one of the string and compared to the other string.
 
 
-// function reverseComparision(string1,string2){
-//  if(string1.length !== string2.length){
-//    return false
-//  }
-//  let lookUp = {}
-//   for(let i =string1.length-1; i >= 0 ; i--){
-//     lookUp[string1[i]] ? lookUp[string1[i]]+=1 : lookUp[string1[i]] = 1
+function reverseComparision(string1,string2){
+ if(string1.length !== string2.length){
+   return false
+ }
+ let lookUp = {}
+  for(let i =string1.length-1; i >= 0 ; i--){
+    lookUp[string1[i]] ? lookUp[string1[i]]+=1 : lookUp[string1[i]] = 1
 
-//   } 
-//    for(let i = 0; i <string2.length;i++){
+  } 
+   for(let i = 0; i <string2.length;i++){
 
-//      if(!lookUp[string2[i]]){
-//        return false
-//      }else{
-//        lookUp[string1[i]] -=1
-//      }
-//    }
+     if(!lookUp[string2[i]]){
+       return false
+     }else{
+       lookUp[string1[i]] -=1
+     }
+   }
     
-//   return true 
-// }
+  return true 
+}
 
-// console.log(reverseComparision("wale","wale"))
-// console.log(reverseComparision("baby","ybab"))
-// console.log(reverseComparision("bab","by"))
-// console.log(reverseComparision("",""))
-// console.log(reverseComparision([1,2,3,4],[1,2,3,4]))
-// console.log(reverseComparision([1,2,3],[1,4,9]))
+console.log(reverseComparision("wale","wale"))
+console.log(reverseComparision("baby","ybab"))
+console.log(reverseComparision("bab","by"))
+console.log(reverseComparision("",""))
+console.log(reverseComparision([1,2,3,4],[1,2,3,4]))
+console.log(reverseComparision([1,2,3],[1,4,9]))
 
 
 
