@@ -1,26 +1,46 @@
+// function to check unique numbers
+
+
+function countUniqueNum(arr){
+ let left = 0;
+  for(let rigth = 1; rigth < arr.length;rigth++){
+
+     if(arr[left] !== arr[rigth]){
+       left ++ ;
+       arr[left] = arr[rigth]
+
+     }
+  }
+ 
+  return left + 1
+ 
+}
+console.log(countUniqueNum([1,1,1,1,1,2]))
+
+
 
 //Giving array we need to add two pairs of number which is equal zero and return this numbers.
 // Giving array of a number with two pairs if they are even return the numbers
-function checkEvenNum(arr){
-  let left = 0
-  let rigth = arr.length-1
- while(arr[left] < arr[rigth]){
+// function checkEvenNum(arr){
+//   let left = 0
+//   let rigth = arr.length-1
+//  while(arr[left] < arr[rigth]){
 
-  let evenNumber = (arr[left] + arr[rigth])
+//   let evenNumber = (arr[left] + arr[rigth])
     
-   if(evenNumber % 2 === 0){
-     return [arr[left], arr[rigth]]
-   }else if (evenNumber > 0){
-      rigth --
-   }else{
-     left ++
-   }
+//    if(evenNumber % 2 === 0){
+//      return [arr[left], arr[rigth]]
+//    }else if (evenNumber > 0){
+//       rigth --
+//    }else{
+//      left ++
+//    }
   
- }
+//  }
 
  
-}
-console.log(checkEvenNum([-1,-2,-3,-4,0,1,2,3,4,5,6,7,8]))
+// }
+// console.log(checkEvenNum([-1,-2,-3,-4,0,1,2,3,4,5,6,7,8]))
 // function addPairs(arr){
 
 //  let left = 0
