@@ -1,26 +1,84 @@
-// function to check unique numbers
+function recursive(num){
 
-
-//find the sum of two pairs of number added equal 10 
-function add2Pairs(arr){
-  let left = 0
-  let rigth = arr.length-1
- 
-  while(left < rigth){
-    let sum = arr[left] + arr[rigth]
-    // checking if the sum of left and rigth is equal 10
-    if(sum === 10 ){
-       return [arr[left],arr[rigth]]
-    }else if (sum > 10 ){
-      rigth -- 
-    }else{
-      left ++
-    }
-
-  }
-
+  if(num === 5) return 1;
+   return num + recursive(num -1)
 }
-console.log(add2Pairs([1,2,3,4,5,6,7,8]))
+ console.log(recursive(10))
+
+
+
+
+// const isLucky = (num) => {
+//   if (
+//     (num.toString().includes("6") && num.toString().includes("8")) ||
+//     (!num.toString().includes("6") && !num.toString().includes("8"))
+//   ) {
+//     return false;
+//   }
+//   return true;
+// };
+
+// const luckyRange = (l, h) => {
+//   let i = 0;
+//   for (let x = l; x <= h; x++) {
+//     if (isLucky(x)) i++;
+//   }
+//   return i;
+// };
+
+// function sameFrequency(num1,num2){
+//   // good luck. Add any arguments you deem necessary.
+//   if(num1 !== num2) {
+//     return false
+//   }
+//    lookUp = {}
+   
+//   for(let i = 0; i < num1;i++){
+//       lookUp[i] ? lookUp[i]+=1 : lookUp[i] = 1
+//   }
+//     for( let i = 0; i < num2;i++){
+
+//       if(!lookUp[i]){
+//         return false
+      
+//       }else{
+//         lookUp[i]-= 1
+//       }
+//     }
+//     return true
+//   }
+  
+  
+// console.log(sameFrequency(182,281))
+
+// function to check unique numbers
+// function sameFrequency(num1,num2){
+//  for( let i = 0; i < num1.length){
+//    console.log(i)
+//  }
+
+// }
+// sameFrequency(182,281)
+//find the sum of two pairs of number added equal 10 
+// function add2Pairs(arr){
+//   let left = 0
+//   let rigth = arr.length-1
+ 
+//   while(left < rigth){
+//     let sum = arr[left] + arr[rigth]
+//     // checking if the sum of left and rigth is equal 10
+//     if(sum === 10 ){
+//        return [arr[left],arr[rigth]]
+//     }else if (sum > 10 ){
+//       rigth -- 
+//     }else{
+//       left ++
+//     }
+
+//   }
+
+// }
+// console.log(add2Pairs([1,2,3,4,5,6,7,8]))
 // function countUniqueNum(arr){
 //  let left = 0;
 //   for(let rigth = 1; rigth < arr.length;rigth++){
