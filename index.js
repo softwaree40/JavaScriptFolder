@@ -1,12 +1,179 @@
-function recursive(num){
 
-  if(num === 5) return 1;
-   return num + recursive(num -1)
+// checking if char in first string appear in char in second string
+
+function isSubsequence(str1,str2){
+  let firstCharObject = {}
+  let scondCharObject = {}
+  for(let i = 0; i < str1.length; i++){
+    let firstChar = str1[i]
+     firstCharObject[firstChar ] ? firstCharObject[firstChar]+=1 : firstCharObject[firstChar] = 1
+  }
+
+  for(let j = 0; j < str2.length; j++){
+    let secondChar = str2[j]
+    scondCharObject[secondChar] ? scondCharObject[secondChar] +=1 : scondCharObject[secondChar] =1
+    
+  }
+  for(let key in firstCharObject){
+    if(firstCharObject[key] === scondCharObject[key]){
+      return true
+    }
+   
+  }
+  return false
 }
- console.log(recursive(10))
+
+console.log(isSubsequence("hello","hello world"))
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function recursive(num){
+// Write function name sameFrequency giving two positive integers 182,281
+// input is positive integers of 182 and 281
+// find out if the two integers has same frequency of digit
+// function sameFrequency(num1, num2){
+//   let strNum1 = num1.toString();
+//   let strNum2 = num2.toString();
+//   if(strNum1.length !== strNum2.length) return false;
+  
+//   let countNum1 = {};
+//   let countNum2 = {};
+  
+//   for(let i = 0; i < strNum1.length; i++){
+//     countNum1[strNum1[i]] = (countNum1[strNum1[i]] || 0) + 1
+//   }
+  
+//   for(let j = 0; j < strNum2.length; j++){
+//     countNum2[strNum2[j]] = (countNum2[strNum2[j]] || 0) + 1
+//   }
+  
+//   for(let key in countNum1){
+//     if(countNum1[key] !== countNum2[key]) return false;
+//   }
+ 
+//   return true;
+// }
+
+// function sameFrequency(num1,num2){
+//   // good luck. Add any arguments you deem necessary.
+//   let num1ConvertToArray = ("" + num1).split("")
+//   let num2ConvertToArray = ("" + num2).split("")
+  
+//   let lookUp1 = {}
+//   let lookUp2 = {}
+//   console.log(lookUp1,lookUp2)
+//   if(num1ConvertToArray.length !== num2ConvertToArray.length ){
+//     return false
+//   }
+//    for (let i = 0; i < num1ConvertToArray.length; i++){
+//     lookUp1[i] ?  lookUp1[i]+=1 : lookUp1[i]= 1
+//    }
+
+// arr = [[1,2,3],[4,5,6],[7,8,9]] // da => 1,5,9 and 3,5,7
+
+// arr[0][0] === 1
+// arr[1][1] == 5
+// arr[2][2] == 9
+
+// arr[3-2][0]  == 7
+// arr[3-1][1]  == 5
+// arr[3-0][2] == 3
+
+// // arr[2][0]  == 7
+// // arr[1][1]  == 5
+// // arr[0][2] == 3
+// let sumA = 0
+//  let sumB = 0
+
+// for(let i = 0; i < arr.length; i++){
+ 
+// sumA += arr[i][i]
+// sumB += arr[arr.length-1-i][i]
+
+// }
+
+// let result = sumA - sumB
+
+//  if (result < 0){
+//    return result*=-1
+//  }
+// return result 
+
+//    for(let j = 0; j < num2ConvertToArray.length;j++){
+//     lookUp2[j] ?  lookUp2[j]+=1 : lookUp2[j]= 1
+//    }
+//    // let check the frequency
+//    for(let key in num1ConvertToArray){
+//      if(lookUp1[key] !== lookUp2[key] )return false
+//    }
+//   return true
+
+// }
+// console.log(sameFrequency(182,281))
+
+//If the book is returned after the expected return day but still within the same 
+//calendar month and year as the expected return date, .
+
+// function libraryFine(d1, m1, y1, d2, m2, y2) {
+  
+  
+// }
+// console.log(libraryFine(30, 5, 2015,2, 5 ,2015))
+
+
+
+// function supplyOf(num){
+//   let convertArrayToObj = {};
+   
+//  for(let i =0; i < num.length;i++){
+//    let numValue = num[i]
+//    convertArrayToObj[numValue] ? convertArrayToObj[numValue] +=1 : convertArrayToObj[numValue] = 1
+
+//  }
+//   for(let key in onvertArrayToObj){
+//     if(convertArrayToObj[key] > 1){
+//       return true
+//     }
+//   }
+//   return false
+// }
+// console.log(supplyOf(1,2,2,4,4,5))
+
+
+
+
+
+//   if(num === 5) return 1;
+//    return num + recursive(num -1)
+// }
+//  console.log(recursive(10))
+// function recursiveArray(arr){
+//  if( arr === 1) return 1
+//    return arr + recursiveArray(arr-1)
+// }
+// console.log(recursiveArray(185))
+// let arr1 = 185
+// let sum = 0
+// for(let i =0; i < arr1; i++){
+//    sum+=arr1[i]
+// }
+// console.log(Number(sum))
 
 // const isLucky = (num) => {
 //   if (
