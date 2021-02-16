@@ -1,32 +1,47 @@
 
 // checking if char in first string appear in char in second string
 
-function isSubsequence(str1,str2){
-  let firstCharObject = {}
-  let scondCharObject = {}
-  for(let i = 0; i < str1.length; i++){
-    let firstChar = str1[i]
-     firstCharObject[firstChar ] ? firstCharObject[firstChar]+=1 : firstCharObject[firstChar] = 1
-  }
+// function isSubsequence(str1,str2){
+//   let firstCharObject = {}
+//   let scondCharObject = {}
+//   for(let i = 0; i < str1.length; i++){
+//     let firstChar = str1[i]
+//      firstCharObject[firstChar ] ? firstCharObject[firstChar]+=1 : firstCharObject[firstChar] = 1
+//   }
 
-  for(let j = 0; j < str2.length; j++){
-    let secondChar = str2[j]
-    scondCharObject[secondChar] ? scondCharObject[secondChar] +=1 : scondCharObject[secondChar] =1
+//   for(let j = 0; j < str2.length; j++){
+//     let secondChar = str2[j]
+//     scondCharObject[secondChar] ? scondCharObject[secondChar] +=1 : scondCharObject[secondChar] =1
     
-  }
-  for(let key in firstCharObject){
-    if(firstCharObject[key] === scondCharObject[key]){
-      return true
-    }
+//   }
+//   for(let key in firstCharObject){
+//     if(firstCharObject[key] === scondCharObject[key]){
+//       return true
+//     }
    
-  }
-  return false
+//   }
+//   return false
+// }
+
+// console.log(isSubsequence("hello","hello world"))
+
+// Find uniqueValue for this array 
+
+function findUniqueValue(arr){
+  let startIndex = 0;
+// iterate over the array 
+for(let nextIndex = 1; nextIndex < arr.length; nextIndex++){
+ if(arr[startIndex] !== arr[nextIndex]){
+   startIndex ++;
+   arr[startIndex] = arr[nextIndex]
+   
+
+ }
+ 
 }
-
-console.log(isSubsequence("hello","hello world"))
-
-
-
+   return startIndex + 1
+}
+console.log(findUniqueValue([1,1,2,4,4,3,7,5,5,8]))
 
 
 
