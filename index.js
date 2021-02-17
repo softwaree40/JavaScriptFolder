@@ -1,3 +1,99 @@
+function checkIfSame(str1,str2){
+ let objectStr1 = {}
+ let objectStr2 = {}
+ if (str1.length !== str2.length) return false
+ for(let val of str1){
+   objectStr1[val] = (objectStr1[val] || 0) + 1
+
+ }
+
+ for(let val of str2){
+  objectStr2[val] = (objectStr2[val] || 0) + 1
+
+}
+ for(let key in objectStr1){
+   if(!key in objectStr2)return false
+  
+   if(objectStr1[key]!== objectStr2[key]) return false
+  
+
+ }
+
+ return true
+}
+console.log(checkIfSame("",""))
+console.log(checkIfSame("aaz","zza"))
+console.log(checkIfSame("anagram","nagaram"))
+console.log(checkIfSame("rat","car"))
+console.log(checkIfSame("rat","art"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function same(arr1,arr2){
+
+//   if(arr1.length !== arr2.length) return false
+//   objectForArr1 = {}
+//   objectForArr2 = {}
+//  for(let value of arr1){
+//    objectForArr1[value*value] ?  objectForArr1[value*value]+=1 :  objectForArr1[value*value] = 1
+//  }
+//  for(let value of arr2){
+//   objectForArr2[value] ?  objectForArr2[value]+=1 :  objectForArr2[value] = 1
+//  }
+//  for(let key in objectForArr2 ){
+//    if(objectForArr2[key] !== objectForArr1[key]){
+//      return false
+//    }
+//    objectForArr1[key]-=1
+//  }
+//   return true
+
+// }
+// console.log(same([1,2,3,4],[4,1,9,16]))
+// function same(arr1,arr2){
+//   if(arr1.length !== arr2.length) return false
+//   objectForArr1 = {}
+//   objectForArr2 = {}
+//  for(let value of arr1){
+//    objectForArr1[value*value] ?  objectForArr1[value*value]+=1 :  objectForArr1[value*value] = 1
+//  }
+//  for(let value of arr2){
+//   objectForArr2[value] ?  objectForArr2[value]+=1 :  objectForArr2[value] = 1
+//  }
+//  for(let key in objectForArr1 ){
+//    if(!key in objectForArr2) return false
+     
+//    if (objectForArr1[key] !== objectForArr2[key])return false
+ 
+//  }
+//   return true 
+
+// }
+// console.log(same([1,2,3,4],[4,1,9,16]))
+
+
+
+
 
 // checking if char in first string appear in char in second string
 
@@ -27,23 +123,21 @@
 
 // Find uniqueValue for this array 
 
-function findUniqueValue(arr){
-  let startIndex = 0;
-// iterate over the array 
-for(let nextIndex = 1; nextIndex < arr.length; nextIndex++){
- if(arr[startIndex] !== arr[nextIndex]){
-   startIndex ++;
-   arr[startIndex] = arr[nextIndex]
+// function findUniqueValue(arr){
+//   let startIndex = 0;
+// // iterate over the array 
+// for(let nextIndex = 1; nextIndex < arr.length; nextIndex++){
+//  if(arr[startIndex] !== arr[nextIndex]){
+//    startIndex ++;
+//    arr[startIndex] = arr[nextIndex]
    
 
- }
+//  }
  
-}
-   return startIndex + 1
-}
-console.log(findUniqueValue([1,1,2,4,4,3,7,5,5,8]))
-
-
+// }
+//    return startIndex + 1
+// }
+// console.log(findUniqueValue([1,1,2,4,4,3,7,5,5,8]))
 
 
 
