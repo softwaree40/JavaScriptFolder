@@ -1,24 +1,29 @@
-function bubbleSort(arr){
+// function bubbleSort(arr){
+   
 
-  // start loop from end of the array towards the beginning with variable i
-  // start loop inner loop with variable j from the beginning of the array until i - 1
-  // if array[j] is greater than array[j+ 1] ,swap both values
-  //return sorted array ...
+//   // start loop from end of the array towards the beginning with variable i
+//   // start loop inner loop with variable j from the beginning of the array until i - 1
+//   // if array[j] is greater than array[j+ 1] ,swap both values
+//   //return sorted array ...
 
-  for(let j = arr.length; j > 0 ; j--){
-    for(let i=0; i < j- 1; i++){
-      console.log(arr[i], arr[i + 1])
-      if(arr[i] > arr[ i + 1]){
-          let temp = arr[i]
-          arr[i] = arr[i + 1]
-          arr[i + 1] = temp
-      }
-    }
-  }
+//   for(let j = arr.length; j > 0 ; j--){
+//     for(let i=0; i < j- 1; i++){
+     
+//       if(arr[i] > arr[ i + 1]){
+//           let temp = arr[i]
+//           arr[i] = arr[i + 1]
+//           arr[i + 1] = temp
+//       }
+//     }
+//   }
   
-  return arr
+//   return arr
+//   }
+//   console.log(bubbleSort([3, 1 ,9 ,5 ,7, 11 ,13, 6 ,8]))  //1,2,3,4,5,6
+  function sortingArray(a,b){
+    return a - b
   }
-  console.log(bubbleSort([1,4,5,7,10,11,45,7,8,3]))
+  console.log([3, 1 ,9 ,5 ,7, 11 ,13, 6 ,8].sort(sortingArray))
 
 
 // function linearSearch(arr,value){
