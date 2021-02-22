@@ -1,41 +1,161 @@
-function checkIfSame(str1,str2){
- let objectStr1 = {}
- let objectStr2 = {}
- if (str1.length !== str2.length) return false
- for(let val of str1){
-   objectStr1[val] = (objectStr1[val] || 0) + 1
+function bubbleSort(arr){
 
- }
+  // start loop from end of the array towards the beginning with variable i
+  // start loop inner loop with variable j from the beginning of the array until i - 1
+  // if array[j] is greater than array[j+ 1] ,swap both values
+  //return sorted array ...
 
- for(let val of str2){
-  objectStr2[val] = (objectStr2[val] || 0) + 1
-
-}
- for(let key in objectStr1){
-   if(!key in objectStr2)return false
+  for(let j = arr.length; j > 0 ; j--){
+    for(let i=0; i < j- 1; i++){
+      console.log(arr[i], arr[i + 1])
+      if(arr[i] > arr[ i + 1]){
+          let temp = arr[i]
+          arr[i] = arr[i + 1]
+          arr[i + 1] = temp
+      }
+    }
+  }
   
-   if(objectStr1[key]!== objectStr2[key]) return false
+  return arr
+  }
+  console.log(bubbleSort([1,4,5,7,10,11,45,7,8,3]))
+
+
+// function linearSearch(arr,value){
+//  if(value > arr) return false
+
+//  for(let i = 0; i < arr.length;i++){
+//    if(arr[i] === value){
+//      return i
+//    }
+//    return -1 
+
+//  }
+
+// }
+// console.log(linearSearch([1,2,5,6,6,7,8],3))
+
+
+
+// function maxSubarraySum(arr,subNub){
+//   let sumMax = 0
+//   let currentArray = 0
+//   if( subNub > arr.length ){
+//       return null;
+//   }
+//   for(let i = 0; i < subNub;i++){
+//       sumMax+=arr[i]
+//   }
+//   currentArray = sumMax;
+//  for(let i = subNub; i < arr.length; i++){
+//      currentArray = currentArray - arr[i - subNub] + arr[i];
+//      sumMax = Math.max(sumMax,currentArray);
+//  }
+// // add whatever parameters you deem necessary - good luck!
+// return sumMax
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function checkIfSame(str1,str2){
+//  let objectStr1 = {}
+//  let objectStr2 = {}
+//  if (str1.length !== str2.length) return false
+//  for(let val of str1){
+//    objectStr1[val] = (objectStr1[val] || 0) + 1
+
+//  }
+
+//  for(let val of str2){
+//   objectStr2[val] = (objectStr2[val] || 0) + 1
+
+// }
+//  for(let key in objectStr1){
+//    if(!key in objectStr2)return false
+  
+//    if(objectStr1[key]!== objectStr2[key]) return false
   
 
- }
+//  }
 
- return true
-}
-console.log(checkIfSame("",""))
-console.log(checkIfSame("aaz","zza"))
-console.log(checkIfSame("anagram","nagaram"))
-console.log(checkIfSame("rat","car"))
-console.log(checkIfSame("rat","art"))
+//  return true
+// }
+// console.log(checkIfSame("",""))
+// console.log(checkIfSame("aaz","zza"))
+// console.log(checkIfSame("anagram","nagaram"))
+// console.log(checkIfSame("rat","car"))
+// console.log(checkIfSame("rat","art"))
+
+// if(string1.length !== string2.length){
+//   return false
+// }
+//  let lookUp = {}
+ 
+//  for(let i = 0; i < string1.length; i++){
+//    lookUp[string1[i]] ? lookUp[string1[i]] +=1 : lookUp[string1[i]] = 1 
+//  }
+
+//  for(let i = 0; i < string2.length; i++){
+//    if(!lookUp[string2[i]]){
+//      return false
+//    }else{
+//      lookUp[string2[i]] -= 1
+//    }
+
+    
+//  }
+//  return true
 
 
+// function sumZero(arr){
+//  let start = 0;
+//  end = arr.length-1;
+//  console.log(end)
+//  while (start < end){
+//   let sum = arr[start] + arr[end]
+//   if(sum === 0){
+//     return [arr[start],arr[end]]
+//   }else if (sum > 0){
+//     end++
+//   }
+//    start-- 
+//  }
 
+// }
+// console.log(sumZero([-3,-2,-1,0,1,2,3]))
+// 
+// function uniqueValue(arr){
+//   let newArray = []
+//  let start = 0
+//  for(let j = 0; j < arr.length; j++){
+//    if(arr[start] !== arr[j]){
+//       newArray.push(arr[start],arr[j])
+//       start ++ 
+//    }else{
+//      return arr.slice(start && j, 1)
+//    }
 
+//  }
+//  return newArray.length
 
-
-
-
-
-
+// }
+// console.log(uniqueValue([-3,-2,-0,1,1,2,3]))
 
 
 
