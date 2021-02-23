@@ -17,9 +17,11 @@ function selectionSort(arr){
      }
 
     }
-    let temp = arr[j];
+    if(i != minimumValue){
+      let temp = arr[j];
         arr[j] = arr[minimumValue];
         arr[minimumValue] = temp;
+    }
   }
   return arr
   }
