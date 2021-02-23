@@ -1,29 +1,75 @@
-function bubbleSort(arr){
-  let noSwaps;
 
-  // start loop from end of the array towards the beginning with variable i
-  // start loop inner loop with variable j from the beginning of the array until i - 1
-  // if array[j] is greater than array[j+ 1] ,swap both values
-  //return sorted array ...
-
-  for(let j = arr.length; j > 0 ; j--){
-    noSwaps = true
-    for(let i=0; i < j- 1; i++){
-      
-      if(arr[i] > arr[ i + 1]){
-          // let temp = arr[i]
-          // arr[i] = arr[i + 1]
-          // arr[i + 1] = temp
-          arr[i],arr[i + 1] = arr[i + 1],arr[i]
-          noSwaps = false
-      }
-    }
-    if(noSwaps) break
-  }
+function selectionSort(arr){
+  // Store the first element as the smallest value you have seen so far.
+  //Compare this item to the next item in the array you find a smaller number.
+  // if a smaller number is found designate that smaller number to be the new "minimum"
+  // and continue until the end of the array.
+  // if the "mininum"is not the value(index)you initially began with swap the two values.
+  //Repeat this with the next element unitl array is sorted
   
+  for(i = arr.length; i > 0 ; i--){
+    let minimumValue = 0;
+    for(j = 0; j < i+1 ; j++){
+
+     if(arr[j] < arr[minimumValue]){
+       minimumValue = j;
+   
+     }
+
+    }
+    let temp = arr[j];
+        arr[j] = arr[minimumValue];
+        arr[minimumValue] = temp;
+  }
   return arr
   }
-  console.log(bubbleSort([3, 1 ,9 ,5 ,7, 11 ,13, 6 ,8]))  //1,2,3,4,5,6
+  console.log(selectionSort([3, 1 ,9 ,5 ,7, 11 ,13, 6 ,8])) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function bubbleSort(arr){
+//   let noSwaps;
+
+//   // start loop from end of the array towards the beginning with variable i
+//   // start loop inner loop with variable j from the beginning of the array until i - 1
+//   // if array[j] is greater than array[j+ 1] ,swap both values
+//   //return sorted array ...
+
+//   for(let j = arr.length; j > 0 ; j--){
+//     noSwaps = true
+//     for(let i=0; i < j- 1; i++){
+      
+//       if(arr[i] > arr[ i + 1]){
+//           // let temp = arr[i]
+//           // arr[i] = arr[i + 1]
+//           // arr[i + 1] = temp
+//           arr[i],arr[i + 1] = arr[i + 1],arr[i]
+//           noSwaps = false
+//       }
+//     }
+//     if(noSwaps) break
+//   }
+  
+//   return arr
+//   }
+//   console.log(bubbleSort([3, 1 ,9 ,5 ,7, 11 ,13, 6 ,8]))  //1,2,3,4,5,6
   // function sortingArray(a,b){
   //   return a - b
   // }
