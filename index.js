@@ -1,5 +1,296 @@
+"use strict"
 
-function selectionSort(arr){
+function binarySearch(array,val){
+  let left = 0;
+  let rigth = array.length-1
+  let middle = Math.floor((left + rigth)/2)
+  while(array[middle]!== val){
+   if(array[middle] < val){
+       left = middle + 1
+   }else{
+     right = middle - 1
+   }
+  
+}
+
+}
+binarySearch()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function maxSubarraySum(arr, num){
+//   if (arr.length < num) return null;
+
+//   let total = 0;
+//   for (let i=0; i<num; i++){
+//      total += arr[i];
+//   }
+//   let currentTotal = total;
+//   for (let i = num; i < arr.length; i++) {
+//      currentTotal += arr[i] - arr[i-num];
+//      total = Math.max(total, currentTotal);
+//   }
+//   return total;
+// }
+//minSubArrayLen Solution
+// function minSubArrayLen(nums, sum) {
+// let total = 0;
+// let start = 0;
+// let end = 0;
+// let minLen = Infinity;
+
+// while (start < nums.length) {
+//   // if current window doesn't add up to the given sum then 
+//   // move the window to right
+//   if(total < sum && end < nums.length){
+//     total += nums[end];
+//     end++;
+//   }
+//   // if current window adds up to at least the sum given then
+//   // we can shrink the window 
+//   else if(total >= sum){
+//     minLen = Math.min(minLen, end-start);
+//     total -= nums[start];
+//     start++;
+//   } 
+//   // current total less than required total but we reach the end, need this or else we'll be in an infinite loop 
+//   else {
+//     break;
+//   }
+// }
+
+// return minLen === Infinity ? 0 : minLen;
+// }
+// findLongestSubstring Solution
+// function findLongestSubstring(str) {
+// let longest = 0;
+// let seen = {};
+// let start = 0;
+
+// for (let i = 0; i < str.length; i++) {
+//   let char = str[i];
+//   if (seen[char]) {
+//     start = Math.max(start, seen[char]);
+//   }
+//   // index - beginning of substring + 1 (to include current in count)
+//   longest = Math.max(longest, i - start + 1);
+//   // store the index of the next char so as to not double count
+//   seen[char] = i + 1;
+// }
+// return longest;
+// }
+
+//=========================================================================
+function toIterateOverArray(newArray){
+ let listOfArray = []
+ if(listOfArray){
+  listOfArray.push(newArray[0])
+ }
+ listOfArray = listOfArray.concat(toIterateOverArray(newArray.slice(1)))
+ 
+ return listOfArray
+}
+console.log(toIterateOverArray[1,3,4,5,6,7])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function countUniqueValues(arr){
+//   if(arr.length === 0)return 0
+//   let start = 0;
+//   for(let secondStep = start + 1; secondStep < arr.length;secondStep ++ ){
+  
+//      if(arr[start] !== arr[secondStep]){
+      
+//        start ++
+//        arr[start] = arr[secondStep]
+//      }
+ 
+//   }
+//   return start + 1
+// }
+
+// console.log(countUniqueValues([1,1,1,1,1,2]))
+// console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]))
+// console.log(countUniqueValues([]))
+// console.log(countUniqueValues([-2,-1,-1,0,1]))
+// console.log(countUniqueValues([1,1,2,3]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function sumZero(arr){
+//  let start = 0;
+//  let end = arr.length-1;
+//  while(start < end){
+//   let sumPairs = arr[start] + arr[end]
+//   if(sumPairs === 0){
+//     return [arr[start], arr[end]];
+//   }else if (sumPairs < 0){
+//     start ++
+//   }else{
+//     end --
+//   }
+//  }
+
+// }
+// console.log(sumZero([-3,-2,-1,0,1,2,3]))
+// bad code quadratic solution 0(n*2)
+// function countUniqueValues(arr){
+//   let arrNew =[]
+//  for(let i = 0; i < arr.length; i++){
+//    for(let j = i +1; j < arr.length; j++){
+//      if(arr[i] !== arr[j]){
+//         arrNew.push(arr[i],arr[j])
+//      }
+
+//    }
+
+//  }
+//   return  setUniq(arr)
+// }
+
+// function setUniq(value){
+//    return new Set(value).size
+// }
+
+// console.log(countUniqueValues([1,1,1,1,1,2]))
+// console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]))
+// console.log(countUniqueValues([]))
+// console.log(countUniqueValues([-2,-1,-1,0,1]))
+
+
+
+
+
+
+
+
+
+// function validAnagram(str1,str2){
+//   let objectStr1 = {};
+//   let objectStr2 = {};
+//   // checking the length of the two strings if they are equal
+//  if(str1.length !== str2.length) return false;
+//  // make an object to count the numbers of string and frequency
+ 
+//  console.log(objectStr1,objectStr2)
+//  // iterate over both string to build an object.
+//  for(let char of str1){
+//    objectStr1[char] = (objectStr1[char] || 0) + 1
+//  }
+//  for(let char2 of str2){
+//   objectStr2[char2] = (objectStr2[char2] || 0) + 1
+// }
+//  // iterate over one of the keys in the object
+//  for(let key in objectStr1){
+//    if(!(key in objectStr2)){
+     
+//      return false
+//    }
+//    if(objectStr2[key] != objectStr1[key]){
+     
+//      return false
+//    }
+
+//  }
+//  return true
+// let objectStr1 = {};
+// let objectStr2 = {};
+// if (str1.length !== str2.length) return false;
+// for(let val of str1){
+//   objectStr1[val] = (objectStr1[val] || 0) + 1;
+// }
+// for(let val of str2){
+//  objectStr2[val] = (objectStr2[val] || 0) + 1;
+// }
+//  // check if the key in both object are equal also with the frequency
+
+  
+ 
+// return true
+// }
+// console.log(validAnagram([""],[""]))
+// console.log(validAnagram(["aaa"],["zza"]))
+// console.log(validAnagram(["anagram"],["nagaram"]))
+// console.log(validAnagram(["rat"],["car"]))
+// console.log(validAnagram(["awesome"],["awesom"]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function selectionSort(arr){
   // Store the first element as the smallest value you have seen so far.
   //Compare this item to the next item in the array you find a smaller number.
   // if a smaller number is found designate that smaller number to be the new "minimum"
@@ -7,25 +298,25 @@ function selectionSort(arr){
   // if the "mininum"is not the value(index)you initially began with swap the two values.
   //Repeat this with the next element unitl array is sorted
   
-  for(i = arr.length; i > 0 ; i--){
-    let minimumValue = 0;
-    for(j = 0; j < i+1 ; j++){
+  // for(i = arr.length; i > 0 ; i--){
+  //   let minimumValue = 0;
+  //   for(j = 0; j < i+1 ; j++){
 
-     if(arr[j] < arr[minimumValue]){
-       minimumValue = j;
+  //    if(arr[j] < arr[minimumValue]){
+  //      minimumValue = j;
    
-     }
+  //    }
 
-    }
-    if(i != minimumValue){
-      let temp = arr[j];
-        arr[j] = arr[minimumValue];
-        arr[minimumValue] = temp;
-    }
-  }
-  return arr
-  }
-  console.log(selectionSort([3, 1 ,9 ,5 ,7, 11 ,13, 6 ,8])) 
+  //   }
+  //   if(i != minimumValue){
+  //     let temp = arr[j];
+  //       arr[j] = arr[minimumValue];
+  //       arr[minimumValue] = temp;
+  //   }
+  // }
+  // return arr
+  // }
+  // console.log(selectionSort([3, 1 ,9 ,5 ,7, 11 ,13, 6 ,8])) 
 
 
 
@@ -111,8 +402,26 @@ function selectionSort(arr){
 // // add whatever parameters you deem necessary - good luck!
 // return sumMax
 // }
+// function same(arr1,arr2){
+//  let objArr1 = {};
+//  let objArr2 = {};
+//  for(let val of arr1) objArr1[val] = (objArr1[val] || 0) + 1
 
+//  for(let val2 of arr2) objArr1[val2] = (objArr2[val2] || 0) + 1
+//  for( let key in objArr1){
+//    if(!key *2 === objArr2){
+//      return false
+//    }else if (objArr1[key] != objArr2[key]){
+//      return false
+//    }
+//  }
+ 
 
+//   return true
+// }
+// console.log(same([1,2,3],[4,1,9]))
+// console.log(same([1,2,3],[1,9]))
+// console.log(same([1,2,1],[4,4,1]))
 
 
 
