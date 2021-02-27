@@ -1,26 +1,43 @@
 "use strict"
 
-function binarySearch(array,val){
-  let left = 0;
-  let rigth = array.length-1
-  let middle = Math.floor((left + rigth)/2)
-  while(array[middle]!== val){
-   if(array[middle] < val){
-       left = middle + 1
-   }else{
-     right = middle - 1
-   }
-  
+// function binarySearch(array,val){
+//   let left = 0;
+//   let rigth = array.length-1
+//   let middle = Math.floor((left + rigth)/2)
+//   while(array[middle]!== val){
+//    if( val < array[middle]){
+//        rigth = middle - 1
+//    }else{
+//      left = middle + 1
+//    }
+//    middle = Math.floor((left + rigth)/2)
+// }
+//  return -1
+// }
+// binarySearch()
+//======================================================
+function bubbleSort(array){
+  let noSwaps;
+  for(let i = array.length; i > 0; i--){   // check if 4 which is the length of the array
+      noSwaps = true
+    for(let j = 0; j < i-1;j++){
+      if(array[j] > array[j+1]){
+
+        [array[i],array[j+ 1]] = [array[j+1],array[i]]
+      }
+      noSwaps = false
+    }
+    if(noSwaps) break
+  }
+  return array
 }
+console.log(bubbleSort([1,10,13,2,12,4,4,7,8,8,88]))
+// function builtInSort(a,b){
+//  return a - b
 
-}
-binarySearch()
-
-
-
-
-
-
+// }
+// console.log([1,10,13,2,12,4,4,7,8,8,88].sort(builtInSort))
+//[1, 2, 4, 4, 7, 8, 8, 10, 12, 13, 88]
 
 
 
@@ -105,18 +122,18 @@ binarySearch()
 // }
 
 //=========================================================================
-function toIterateOverArray(newArray){
- let listOfArray = []
- if(listOfArray){
-  listOfArray.push(newArray[0])
- }
- listOfArray = listOfArray.concat(toIterateOverArray(newArray.slice(1)))
+// function toIterateOverArray(newArray){
+//  let listOfArray = []
+//  if(listOfArray){
+//   listOfArray.push(newArray[0])
+//  }
+//  listOfArray = listOfArray.concat(toIterateOverArray(newArray.slice(1)))
  
- return listOfArray
-}
-console.log(toIterateOverArray[1,3,4,5,6,7])
+//  return listOfArray
+// }
+// console.log(toIterateOverArray[1,3,4,5,6,7])
 
-
+//[1, 2, 4, 4, 7, 8, 8, 10, 12, 13, 88]
 
 
 
