@@ -1,4 +1,70 @@
 "use strict"
+class Node{
+ constructor(val){
+  this.val = val;
+  this.next = null;
+
+ }
+}
+class singlyLinkedList{
+
+ constructor(){
+  this.head = null;
+  this.tail = null;
+  this.length = 0;
+
+ }
+ push(val){
+   let newNode = new Node(val)
+   if(!this.head){
+     this.head = newNode;
+     this.tail = this.head;
+   }else{
+     this.tail.next = newNode;
+     this.tail = newNode;
+   }
+   this.length ++;
+   return this
+ }
+
+}
+let myNewList = new singlyLinkedList()
+console.log(myNewList.push("you are welcome"))
+console.log(myNewList.push("welcome"))
+
+
+
+// [1,2,3,10,15,30,70]
+// function selectionSort(arr){
+//   // make min to be 0 
+//  let min = 0
+//  // create nested for loop to iterate over the arrays
+//  for(let i = arr.length ; i >0 ; i--){
+//    for(let j= 0; j < i - 1; j++ ){
+//      if(arr[j] > arr[j + 1]){
+        
+//      }
+
+//    }
+
+
+//  }
+//  //compared the index of the two element to see which is less
+ // if anyone is less swap it or designate the smaller one in place of the big one
+ // return the new array
+
+
+
+
+selectionSort(arr)
+
+
+
+
+
+
+
+
 
 // function binarySearch(array,val){
 //   let left = 0;
@@ -16,22 +82,22 @@
 // }
 // binarySearch()
 //======================================================
-function bubbleSort(array){
-  let noSwaps;
-  for(let i = array.length; i > 0; i--){   // check if 4 which is the length of the array
-      noSwaps = true
-    for(let j = 0; j < i-1;j++){
-      if(array[j] > array[j+1]){
+// function bubbleSort(array){
+//   let noSwaps;
+//   for(let i = array.length; i > 0; i--){   // check if 4 which is the length of the array
+//       noSwaps = true
+//     for(let j = 0; j < i-1;j++){
+//       if(array[j] > array[j+1]){
 
-        [array[i],array[j+ 1]] = [array[j+1],array[i]]
-      }
-      noSwaps = false
-    }
-    if(noSwaps) break
-  }
-  return array
-}
-console.log(bubbleSort([1,10,13,2,12,4,4,7,8,8,88]))
+//         [array[i],array[j+ 1]] = [array[j+1],array[i]]
+//       }
+//       noSwaps = false
+//     }
+//     if(noSwaps) break
+//   }
+//   return array
+// }
+// console.log(bubbleSort([1,10,13,2,12,4,4,7,8,8,88]))
 // function builtInSort(a,b){
 //  return a - b
 
