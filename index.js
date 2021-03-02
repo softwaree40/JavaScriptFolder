@@ -1671,16 +1671,16 @@ console.log(myNewList.push("welcome"))
 
 // // // }
 // // // console.log(reserverWordInString("characters"))  // sretcarahc
-// // // function reverseNum(num){
-// // //     let newArray = []
-// // //   for (let i = num.length-1; i >=0; i--){
-// // //      newArray.push(num[i])
+function reverseNum(num){
+    let newArray = []
+  for (let i = num.length-1; i >=0; i--){
+     newArray.push(num[i])
     
-// // //   }
-// // //   return newArray
+  }
+  return newArray
 
-// // // }
-// // // console.log(reverseNum([1,2,3,4,5,6,7,8,9]))
+}
+console.log(reverseNum([1,2,3,4,5,6,7,8,9]))
 
 
 // // // // passing array to a function
