@@ -17,6 +17,7 @@ class singlyLinkedList{
  push(val){
    let newNode = new Node(val)
    if(!this.head){
+     // if the head is empty 
      this.head = newNode;
      this.tail = this.head;
    }else{
@@ -24,6 +25,7 @@ class singlyLinkedList{
     this.tail.next = newNode;
      
    }
+   // increament the node length
    this.length ++;
    return this
  }
@@ -1847,19 +1849,19 @@ console.log(myNewList.push("welcome"))
 
 
 
-// // function countNumberOf(){
-// //     let newObj1 = {}
-// //     let newObj2 = {}
-// //     for(let val of numberOfTime1) {
-// //       newObj1[val] ? newObj1[val]++ : newObj1[val] = 1
+function countNumberOf(){
+    let newObj1 = {}
+    let newObj2 = {}
+    for(let val of numberOfTime1) {
+      newObj1[val] ? newObj1[val]++ : newObj1[val] = 1
       
-// //     }
-// //     for(let val of numberOfTime2) {
-// //        newObj2[val] ? newObj2[val]++ : newObj2[val] = 1
-// //     }
-// //     return (newObj1,newObj2)
-// // }
-// // console.log(countNumberOf(numberOfTime1,numberOfTime2))
+    }
+    for(let val of numberOfTime2) {
+       newObj2[val] ? newObj2[val]++ : newObj2[val] = 1
+    }
+    return (newObj1,newObj2)
+}
+console.log(countNumberOf(numberOfTime1,numberOfTime2))
 
 
 // // let numberOfTime1 = [2,2,4,5,4,6]
