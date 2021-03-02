@@ -1696,14 +1696,14 @@ console.log(reverseNum([1,2,3,4,5,6,7,8,9]))
 // // // arr = [calculateArray(arrayOfYear[0]),calculateArray(arrayOfYear[1]),calculateArray(arrayOfYear[2]),calculateArray(arrayOfYear[3]),calculateArray(arrayOfYear[4])]
 // // // console.log(arr)
 
-// // // challenge 
-// // //  jonas ={
-// // //     firstName: "Jonas",
-// // //     lastName: "Schmedtmann",
-// // //     age: 2037 - 1991,
-// // //     job: "teacher",
-// // //     friends: ["Michael", "Peter", "Steven"]
-// // // }
+challenge 
+ jonas ={
+    firstName: "Jonas",
+    lastName: "Schmedtmann",
+    age: 2037 - 1991,
+    job: "teacher",
+    friends: ["Michael", "Peter", "Steven"]
+}
 // // // // "Jonas has 3 friends,and his best friend is called Michael"
 // // // console.log(jonas.friends.length)
 
