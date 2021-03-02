@@ -1834,18 +1834,18 @@ console.log(myNewList.push("welcome"))
 // // An anagram is a word,phrase, or name fromed by rearranging the letters of another,such
 
 
-// // function anagram(string1){
-// //   checkFrequency = {}
+function anagram(string1){
+  checkFrequency = {}
 
-// //    for( let i = 0; i < string1.length; i++){
-// //       let newElement = string1[i].toLowerCase()
-// //       checkFrequency[newElement] ? checkFrequency[newElement]++ : checkFrequency[newElement] = 1
+   for( let i = 0; i < string1.length; i++){
+      let newElement = string1[i].toLowerCase()
+      checkFrequency[newElement] ? checkFrequency[newElement]++ : checkFrequency[newElement] = 1
 
-// //    }
+   }
 
-// //   return checkFrequency
-// // }
-// // console.log(anagram("Ajagunna"))
+  return checkFrequency
+}
+console.log(anagram("Ajagunna"))
 
 
 
