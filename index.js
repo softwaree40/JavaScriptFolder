@@ -455,19 +455,19 @@ console.log(myNewList.push("welcome"))
   // console.log([3, 1 ,9 ,5 ,7, 11 ,13, 6 ,8].sort(sortingArray))
 
 
-// function linearSearch(arr,value){
-//  if(value > arr) return false
+function linearSearch(arr,value){
+ if(value > arr) return false
 
-//  for(let i = 0; i < arr.length;i++){
-//    if(arr[i] === value){
-//      return i
-//    }
-//    return -1 
+ for(let i = 0; i < arr.length;i++){
+   if(arr[i] === value){
+     return i
+   }
+   return -1 
 
-//  }
+ }
 
-// }
-// console.log(linearSearch([1,2,5,6,6,7,8],3))
+}
+console.log(linearSearch([1,2,5,6,6,7,8],3))
 
 
 
